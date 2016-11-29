@@ -14,9 +14,11 @@ app.get('/', function (req, res) {
 
 // Facebook Webhook
 app.get('/webhook', function (req, res) {
-    if (req.query['hub.verify_token'] === 'testbot_verify_token') {
-        res.send(req.query['hub.challenge']);
+    if (req.query['hub.verify_token'] === 'verify_token_bot') {
+        res.status(200).send(req.query['hub.challenge']);
     } else {
         res.send('Invalid verify token');
+        //console.error("Failed validation. Make sure the validation tokens match.");
+        res.sendStatus(403); 
     }
 });
