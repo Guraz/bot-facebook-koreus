@@ -34,7 +34,7 @@ app.post('/webhook', function (req, res) {
     }
     res.sendStatus(200);
 });
-/*
+
 // generic function sending messages
 function sendMessage(recipientId, message) {
     request({
@@ -52,8 +52,8 @@ function sendMessage(recipientId, message) {
             console.log('Error: ', response.body.error);
         }
     });
-};*/
-
+};
+/*
 // send rich message with kitten
 function kittenMessage(recipientId, text) {
     
@@ -97,3 +97,5 @@ function kittenMessage(recipientId, text) {
     return false;
     
 };
+
+*/
